@@ -88,7 +88,10 @@ export default {
         },
 
         validSend(send) {
-            if (this.formData.servicos !== "") {
+            if (this.formData.servicos !== "" &&
+                this.formData.unidade !== "" &&
+                this.formData.endereco !== "" &&
+                this.formData.telefone !== "") {
                 this.$emit('send-susses', send)
             }
         },
