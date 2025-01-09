@@ -35,7 +35,7 @@
                     class="w-full min-h-52 max-h-52 border border-gray-300 p-2"
                     placeholder="Pule para linha abaixo ao fim de cada item!!!" required></textarea>
             </div>
-            <button type="submit" class="bg-indigo-500 w-96 p-4 text-white
+            <button @click="validSend" type="submit" class="bg-indigo-500 w-96 p-4 text-white
                 absolute bottom-5 right-0 -translate-x-2/4
             hover:bg-pink-500 transition duration-200">Enviar pedido</button>
         </form>
@@ -50,7 +50,8 @@ export default {
         orderName: {
             type: String,
             default: "",
-        }
+        },
+        sendSusses: false
     },
     data() {
         return {
@@ -86,6 +87,12 @@ export default {
             this.$emit('valid-order', item);
         },
 
+        validSend(send) {
+            if (this.formData.servicos !== "") {
+                this.$emit('send-susses', send)
+            }
+        },
+
         // saveToLocalStorage() {
         //     // Salvar o valor no localStorage
         //     localStorage.setItem("unidade", this.formData.unidade);
@@ -118,12 +125,12 @@ export default {
                 userID
             )
                 .then((response) => {
-                    alert("Email enviado com sucesso!");
+                    //alert("Email enviado com sucesso!");
                     console.log("SUCCESS!", response.status, response.text);
                 })
                 .catch((error) => {
                     alert("Ocorreu um erro ao enviar o email.");
-                    console.error("FAILED...", error);
+                    // console.error("FAILED...", error);
                 });
         },
     },

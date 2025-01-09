@@ -1,9 +1,10 @@
 <template>
-    <div class="w-1/4 h-auto m-4 absolute right-4">
+    <div class="w-1/4 h-auto m-4 absolute right-4 flex flex-col gap-10">
         <Transition name="slide-fade">
             <div v-if="orderName" class="p-10 rounded-lg
             bg-gradient-to-r from-indigo-300 via-indigo-400 to-indigo-500">
-                <h1 class="text-xl mb-3 text-white">Você selecionou o item <span class="text-black font-bold">{{ orderName
+                <h1 class="text-xl mb-3 text-white">Você selecionou o item <span class="text-black font-bold">{{
+                    orderName
                         }}</span>
                 </h1>
                 <p class="text-white">Por favor crie sua lista de pedidos usando apenas</p>
@@ -14,14 +15,28 @@
             <div v-if="isValidOrder" class="p-10 rounded-lg 
             bg-gradient-to-r from-red-200 via-red-300 to-red-400">
                 <h1 class="text-xl mb-3 text-white">Você não selecionou nenhum item!!!</h1>
-                <p class="text-white">Por favor, vá até o menu lateral esquerdo e selecione um item para prosseguir com seu pedido!</p>
+                <p class="text-white">Por favor, vá até o menu lateral esquerdo e selecione um item para prosseguir com
+                    seu pedido!</p>
             </div>
         </Transition>
+        <Transition name="slide-fade">
+            <div v-if="sendSusses" class="p-10 rounded-lg  relative
+        bg-gradient-to-r from-blue-200 via-blue-300 to-blue-400">
+                <div class="shake absolute top-3">
+                    <img class="w-32" src="../assets/send.png" alt="">
+                </div>
+                <div>
+                    <h1 class="text-2xl text-white">Pedido enviado com susseso</h1>
+                    <p class="text-1xl text-white">Embreve uma das equipes de manutenção<br>ira até a sua unidade</p>
+                </div>
+            </div>
+        </Transition>
+
     </div>
 </template>
 
 <script setup>
-const props = defineProps(['orderName', 'isValidOrder'])
+const props = defineProps(['orderName', 'isValidOrder', 'sendSusses'])
 
 </script>
 
@@ -38,5 +53,20 @@ const props = defineProps(['orderName', 'isValidOrder'])
 .slide-fade-leave-to {
     transform: translateY(-20px);
     opacity: 0;
+}
+
+.shake {
+    transform: translateX(330px);
+    animation: shake 2s ease-in-out;
+}
+
+@keyframes shake {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(330px);
+    }
 }
 </style>
