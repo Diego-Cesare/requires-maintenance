@@ -4,6 +4,9 @@
       <MainMenu @update-order="updateOrder" />
       <FormBox :orderName="orderName" @valid-order="validateOrder" @send-susses="sendMailSusses" />
       <MessageBox :orderName="orderName" :isValidOrder="isValidOrder" :sendSusses="sendSusses" />
+      <div class="absolute bottom-7 right-7">
+        <p class="text-gray-300 text-xs">Copyright ©2025; Designd by Diego Cesare</p>
+      </div>
     </div>
   </div>
 </template>

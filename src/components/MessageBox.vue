@@ -31,7 +31,6 @@
                 </div>
             </div>
         </Transition>
-
     </div>
 </template>
 
