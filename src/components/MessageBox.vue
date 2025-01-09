@@ -7,14 +7,14 @@
                     orderName
                         }}</span>
                 </h1>
-                <p class="text-white">Por favor crie sua lista de pedidos usando apenas</p>
-                <p class="text-white">itens relacionado á <span class="text-black">{{ orderName }}</span></p>
+                <p class="text-white">Por favor, crie sua lista de pedidos usando apenas</p>
+                <p class="text-white">itens relacionados à <span class="text-black">{{ orderName }}</span></p>
             </div>
         </Transition>
         <Transition name="slide-fade">
             <div v-if="isValidOrder" class="p-10 rounded-lg 
             bg-gradient-to-r from-red-200 via-red-300 to-red-400">
-                <h1 class="text-xl mb-3 text-white">Você não selecionou nenhum item!!!</h1>
+                <h1 class="text-xl mb-3 text-white">Você não selecionou nenhum item!!</h1>
                 <p class="text-white">Por favor, vá até o menu lateral esquerdo e selecione um item para prosseguir com
                     seu pedido!</p>
             </div>
@@ -26,8 +26,8 @@
                     <img class="w-32" src="../assets/send.png" alt="">
                 </div>
                 <div>
-                    <h1 class="text-2xl text-white">Pedido enviado com susseso</h1>
-                    <p class="text-1xl text-white">Embreve uma das equipes de manutenção<br>ira até a sua unidade</p>
+                    <h1 class="text-2xl text-white">Pedido enviado com sucesso</h1>
+                    <p class="text-1xl text-white">Em breve, uma das equipes de manutenção<br>irá até a sua unidade</p>
                 </div>
             </div>
         </Transition>

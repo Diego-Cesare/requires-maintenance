@@ -7,8 +7,8 @@
             <h1 class="text-white text-4xl font-bold">Selecione um dos itens</h1>
             <h1 class="text-white text-4xl font-bold">abaixo.</h1>
             <p class="text-white text-1xl font-thin"><strong>Atenção</strong>! Apenas um item será aceito por vez.
-                <br>Isso ajudara as equipes de manutenção á terem mais agilidade
-                para separar materias, organizar ferramentas e planejar a manutenção na sua unidade.
+                <br>Isso ajudará as equipes de manutenção a terem mais agilidade
+                para separar matérias, organizar ferramentas e planejar a manutenção na sua unidade.
             </p>
         </div>
         <div class="flex flex-col px-10 py-3">
@@ -42,19 +42,19 @@ const hidePlusItems = ref(false)
 const emit = defineEmits(['update-order']);
 
 const items = [
-    { "id": 1, "name": "Elétrica" },
-    { "id": 2, "name": "Hidraulica" },
-    { "id": 3, "name": "Marcenaria" },
-    { "id": 4, "name": "Alvenaria" },
-    { "id": 5, "name": "Serralheria" },
+    { "id": 1, "name": "Alvenaria" },
+    { "id": 2, "name": "Elétrica" },
+    { "id": 3, "name": "Hidráulica" },
+    { "id": 4, "name": "Marcenaria" },
+    { "id": 5, "name": "Serralheria" }
 ]
 
 const plusItems = [
     { "id": 1, "name": "Ar-condicionado" },
-    { "id": 2, "name": "Transporte" },
+    { "id": 2, "name": "Limpeza" },
     { "id": 3, "name": "Móveis" },
-    { "id": 4, "name": "Limpeza" },
-    { "id": 1, "name": "Póda de arvores" },
+    { "id": 4, "name": "Póda de arvores" },
+    { "id": 5, "name": "Transporte" }
 ]
 
 function togglePlusItems() {
