@@ -1,38 +1,41 @@
 <template>
     <div class="m-4 w-2/5">
         <div class="p-10">
-            <h1 class="text-gray-700 text-3xl font-bold">Prepare seu pedido!
+            <h1 class="text-gray-700 text-3xl font-bold dark:text-gray-200">Prepare seu pedido!
                 <span class="text-indigo-600">{{ orderName }}</span>
             </h1>
-            <p class="font-light text-gray-700">Cada campo é importante para uma melhor<br>resposta das equipes de
+            <p class="font-light text-gray-700 dark:text-gray-200">Cada campo é importante para uma melhor<br>resposta das equipes de
                 manutenção.</p>
         </div>
         <form @submit.prevent="sendEmail" class="p-10 h-4/5 relative">
             <div class="flex flex-col">
-                <label for="unity">Nome da unidade</label>
+                <label class="dark:text-gray-200" for="unity">Nome da unidade</label>
                 <input @click="validOrder" name="unidade" type="text" v-model="formData.unidade" class="w-auto border-b-1
                 border-t-0 border-l-0 border-r-0
-                border-gray-800" required>
+                border-gray-800
+                dark:bg-gray-900 dark:border-gray-100 dark:text-white" required>
             </div>
             <div class="flex gap-1 w-auto mt-10">
                 <div class="flex flex-col">
-                    <label for="local">Endereço</label>
+                    <label class="dark:text-gray-200" for="local">Endereço</label>
                     <input @click="validOrder" name="endereco" type="text" v-model="formData.endereco" class="w-96 border-b-1
                 border-t-0 border-l-0 border-r-0
-                border-gray-800" required>
+                border-gray-800
+                dark:bg-gray-900 dark:border-gray-100 dark:text-white" required>
                 </div>
                 <div class="flex flex-col">
-                    <label for="phone">Telefone</label>
+                    <label class="dark:text-gray-200" for="phone">Telefone</label>
                     <input @click="validOrder" name="telefone" type="text" v-model="formData.telefone" class="w-full border-b-1
                 border-t-0 border-l-0 border-r-0
-                border-gray-800" required>
+                border-gray-800
+                dark:bg-gray-900 dark:border-gray-100 dark:text-white" required>
                 </div>
             </div>
             <div class="mt-10">
                 <input type="hidden" name="categoria" v-model="formData.orderName" />
-                <label for="">Lista de pedidos</label>
+                <label class="dark:text-gray-200" for="">Lista de pedidos</label>
                 <textarea @click="validOrder" name="sevicos" v-model="formData.servicos"
-                    class="w-full min-h-52 max-h-52 border border-gray-300 p-2"
+                    class="w-full min-h-52 max-h-52 border border-gray-300 p-2 dark:bg-gray-900 dark:border-gray-100 dark:text-white"
                     placeholder="Pule para linha abaixo ao fim de cada item!!!" required></textarea>
             </div>
             <button @click="validSend" type="submit" class="bg-indigo-500 w-96 p-4 text-white

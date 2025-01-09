@@ -1,5 +1,5 @@
 <template>
-    <div class="bg-indigo-500 w-3/12 m-4 rounded-xl">
+    <div class="bg-indigo-500 w-3/12 m-4 rounded-xl dark:bg-blue-400">
         <div class="p-10">
             <h3 class="text-white text-2xl">Smect manutenção</h3>
         </div>
@@ -13,21 +13,21 @@
         </div>
         <div class="flex flex-col px-10 py-3">
             <button @click="changeOrder(item)" class="flex text-xl text-white font-thin py-2 px-2
-            hover:bg-indigo-400 transition  duration-300" v-for="item in items" :key="item.id">{{ item.name }}</button>
+            hover:bg-indigo-400 transition duration-300 dark:hover:bg-blue-300" v-for="item in items" :key="item.id">{{ item.name }}</button>
         </div>
         <div class="p-10">
             <button @click="togglePlusItems" class="flex justify-between w-full text-white text-1xl
             px-3 py-2
-            bg-indigo-400 hover:bg-indigo-600">Mais serviços
+            bg-indigo-400 hover:bg-indigo-600 dark:bg-blue-300 dark:hover:bg-blue-300">Mais serviços
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                     stroke="currentColor" class="size-6">
                     <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
                 </svg>
             </button>
             <Transition name="slide-fade">
-                <div v-if="hidePlusItems" class="flex flex-col px-2 py-3 bg-indigo-400">
+                <div v-if="hidePlusItems" class="flex flex-col px-2 py-3 bg-indigo-400 dark:bg-blue-300">
                     <button @click="changeOrder(item)" class="flex text-white py-1 px-3 text-xs
-                hover:bg-indigo-300
+                hover:bg-indigo-300 dark:hover:bg-blue-200
                 " v-for="item in plusItems" :key="item.id">{{ item.name }}</button>
                 </div>
             </Transition>

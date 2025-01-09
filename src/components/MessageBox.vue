@@ -2,7 +2,8 @@
     <div class="w-1/4 h-auto m-4 absolute right-4 flex flex-col gap-10">
         <Transition name="slide-fade">
             <div v-if="orderName" class="p-10 rounded-lg
-            bg-gradient-to-r from-indigo-300 via-indigo-400 to-indigo-500">
+            bg-gradient-to-r from-indigo-300 via-indigo-400 to-indigo-500
+            dark:bg-gradient-to-r dark:from-blue-300 dark:via-blue-400 dark:to-blue-500">
                 <h1 class="text-xl mb-3 text-white">Você selecionou o item <span class="text-black font-bold">{{
                     orderName
                         }}</span>
