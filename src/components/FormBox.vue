@@ -30,6 +30,7 @@
             </div>
             <div class="mt-10">
                 <input type="hidden" name="categoria" v-model="formData.orderName" />
+                <label for="">Lista de pedidos</label>
                 <textarea @click="validOrder" name="sevicos" v-model="formData.servicos"
                     class="w-full min-h-52 max-h-52 border border-gray-300 p-2"
                     placeholder="Pule para linha abaixo ao fim de cada item!!!" required></textarea>
