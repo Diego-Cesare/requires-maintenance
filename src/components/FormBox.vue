@@ -22,7 +22,7 @@
           required
         />
       </div>
-      <div class="flex gap-1 w-auto mt-10">
+      <div class="grid grid-cols-2 gap-2 mt-10">
         <div class="flex flex-col">
           <label class="dark:text-gray-200" for="local">Endereço</label>
           <input
@@ -30,7 +30,7 @@
             name="endereco"
             type="text"
             v-model="formData.endereco"
-            class="w-96 border-b-1 border-t-0 border-l-0 border-r-0 border-gray-800 dark:bg-gray-900 dark:border-gray-100 dark:text-white"
+            class="w-auto border-b-1 border-t-0 border-l-0 border-r-0 border-gray-800 dark:bg-gray-900 dark:border-gray-100 dark:text-white"
             required
           />
         </div>
