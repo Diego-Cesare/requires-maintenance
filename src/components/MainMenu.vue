@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-indigo-500 w-3/12 m-4 rounded-xl dark:bg-blue-400">
+  <div class="bg-indigo-500 w-3/12 m-4 rounded-xl dark:bg-blue-400 overflow-hidden">
     <div class="px-10 py-5">
       <h3 class="text-white text-2xl">Smect manutenção</h3>
     </div>
