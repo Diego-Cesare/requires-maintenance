@@ -1,6 +1,6 @@
 <template>
   <div class="flex h-screen w-screen bg-indigo-100 dark:bg-blue-300">
-    <div class="bg-gray-100 dark:bg-gray-950 m-4 w-screen rounded-xl flex">
+    <div class="bg-gray-100 dark:bg-gray-950 m-1 w-screen rounded-xl flex">
       <MainMenu @update-order="updateOrder" />
       <FormBox :orderName="orderName" @valid-order="validateOrder" @send-susses="sendMailSusses" />
       <MessageBox :orderName="orderName" :isValidOrder="isValidOrder" :sendSusses="sendSusses" />

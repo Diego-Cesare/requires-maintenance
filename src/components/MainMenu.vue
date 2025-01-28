@@ -1,9 +1,9 @@
 <template>
   <div class="bg-indigo-500 w-3/12 m-4 rounded-xl dark:bg-blue-400">
-    <div class="p-10">
+    <div class="px-10 py-5">
       <h3 class="text-white text-2xl">Smect manutenção</h3>
     </div>
-    <div class="py-5 px-10">
+    <div class="py-0 px-10">
       <h1 class="text-white text-4xl font-bold">Selecione um dos itens</h1>
       <h1 class="text-white text-4xl font-bold">abaixo.</h1>
       <p class="text-white text-1xl font-thin">
@@ -16,7 +16,7 @@
       <button
         @click="changeOrder(item)"
         :class="{ select: selected === item.id }"
-        class="flex text-xl text-white font-thin py-2 px-2 hover:bg-indigo-400 transition duration-300 dark:hover:bg-blue-300"
+        class="flex text-xl text-white font-normal py-2 px-2 hover:bg-indigo-400 transition duration-300 dark:hover:bg-blue-300"
         v-for="item in items"
         :key="item.id"
       >
@@ -52,7 +52,7 @@
           <button
             @click="changeOrder(item)"
             :class="{ select: selected === item.id }"
-            class="flex text-white py-1 px-3 text-xs hover:bg-indigo-300 dark:hover:bg-blue-200"
+            class="flex text-white py-1 px-3 text-1xl hover:bg-indigo-300 dark:hover:bg-blue-200"
             v-for="item in plusItems"
             :key="item.id"
           >
