@@ -167,7 +167,7 @@ export default {
 
       const serviceID = "service_xi26o83"; // Substitua pelo seu Service ID
       const templateID = "template_4gyqkkj"; // Substitua pelo seu Template ID
-      const userID = "2hKcOoKCHUYuViiaO"; // Substitua pelo seu Public Key
+      const userID = "6QM5hw360ZmQzUOtH"; // Substitua pelo seu Public Key
 
       emailjs
         .send(
